@@ -37,7 +37,7 @@
 
 <section class="pt-5 pb-5">
   <!-- multi card carousel -->
-  <div class="container">
+  <div class="container-fluid p-4">
     <div class="row">
       <div class="col-6">
         <h3 class="mb-3">Carousel cards title</h3>
@@ -55,11 +55,17 @@
       <div id="changeCarouselId" class="carousel slide" data-ride="carousel">
         <a class="carousel-control-prev" style="background-image:none !important" href="#changeCarouselId"
           data-slide="prev">
-          <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+          <div
+            style="border-radius: 100px; background-color: black; padding: 10px; display: flex; justify-content: center;">
+            <span class="carousel-control-prev-icon"></span>
+          </div>
         </a>
         <a class="carousel-control-next" style="background-image:none !important" href="#changeCarouselId"
           data-slide="next">
-          <span class="carousel-control-next-icon" style="background-color: black;"></span>
+          <div
+            style="border-radius: 100px; background-color: black; padding: 10px; display: flex; justify-content: center;">
+            <span class="carousel-control-next-icon"></span>
+          </div>
         </a>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -130,9 +136,9 @@
   <!-- multi card carousel end -->
 
   <!-- multi card carousel ngx-image-slider -->
-  <div class="container mt-5">
+  <div class="container-fluid mt-5">
     <ng-image-slider [images]="imageObject" [infinite]="true" [videoAutoPlay]="true" [manageImageRatio]='true'
-      [showVideoControls]="false" [imageSize]="{width: ' 30%',height: 'auto' }" slideImage="1">
+      [showVideoControls]="false" [imageSize]="{width: ' 30%',height: '40%' }" slideImage="1">
     </ng-image-slider>
   </div>
   <!-- multi card carousel ngx-image-slider end -->
