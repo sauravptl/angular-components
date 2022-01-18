@@ -1,0 +1,56 @@
+p {
+  font-family: Lato;
+}
+
+.carousel .carousel-inner img {
+  height: 100vh;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5%;
+}
+
+.carousel-control-prev-icon {
+  padding: 20px;
+
+}
+
+.carousel-control-next-icon {
+  padding: 20px;
+
+}
+
+.carousel-control-next {
+  background-image: linear-gradient(90deg, rgba(255, 0, 0, 0), rgb(0, 0, 0)) !important;
+}
+
+.carousel-control-prev {
+  background-image: linear-gradient(-90deg, rgba(255, 0, 0, 0), rgb(0, 0, 0)) !important;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .next {
+  color: black;
+  text-decoration: solid;
+  user-select: none;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .prev {
+  color: black;
+  text-decoration: solid;
+  user-select: none;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .main-inner .img-div {
+  box-shadow: none;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .main-inner .img-div img.ratio {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+::ng-deep .ng-image-slider .ng-image-slider-container .main .main-inner .img-div video.ratio {
+  height: 100% !important;
+  width: 100% !important;
+}

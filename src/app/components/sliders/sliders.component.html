@@ -1,0 +1,132 @@
+<div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" alt="100%x280" style="width: 100%;"
+        src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjMyMDc0fQ&s=7c625ea379640da3ef2e24f20df7ce8d">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" alt="100%x280" style="width: 100%;"
+        src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjMyMDc0fQ&s=7c625ea379640da3ef2e24f20df7ce8d">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" alt="100%x280" style="width: 100%;"
+        src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjMyMDc0fQ&s=7c625ea379640da3ef2e24f20df7ce8d">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+<section class="pt-5 pb-5">
+  <!-- multi card carousel -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h3 class="mb-3">Carousel cards title</h3>
+      </div>
+      <!-- button on top -->
+      <!-- <div class="col-6 text-right">
+          <a class="btn btn-primary mb-3 mr-1" href="#changeCarouselId" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <a class="btn btn-primary mb-3 " href="#changeCarouselId" role="button" data-slide="next">
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        </div> -->
+
+      <div id="changeCarouselId" class="carousel slide" data-ride="carousel">
+        <a class="carousel-control-prev" style="background-image:none !important" href="#changeCarouselId"
+          data-slide="prev">
+          <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+        </a>
+        <a class="carousel-control-next" style="background-image:none !important" href="#changeCarouselId"
+          data-slide="next">
+          <span class="carousel-control-next-icon" style="background-color: black;"></span>
+        </a>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let data of carouselData">
+                <div class="card" style="height: 100%;">
+                  <div *ngIf="data.type == 'img'; else video">
+                    <img class="img-fluid" alt="100%x280" src="{{data.src}}" style="height: auto !important;">
+                  </div>
+                  <ng-template #video>
+                    <video class="video-fluid" autoplay loop muted>
+                      <source src="{{data.src}}" type="video/mp4" />
+                    </video>
+                  </ng-template>
+                  <div class="card-body">
+                    <h4 class="card-title">{{data.title}}</h4>
+                    <p class="card-text">{{data.decs}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let data of carouselData">
+                <div class="card" style="height: 100%;">
+                  <div *ngIf="data.type == 'img'; else video">
+                    <img class="img-fluid" alt="100%x280" src="{{data.src}}" style="height: auto !important;">
+                  </div>
+                  <ng-template #video>
+                    <video class="video-fluid" autoplay loop muted>
+                      <source src="{{data.src}}" type="video/mp4" />
+                    </video>
+                  </ng-template>
+                  <div class="card-body">
+                    <h4 class="card-title">{{data.title}}</h4>
+                    <p class="card-text">{{data.decs}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let data of carouselData">
+                <div class="card" style="height: 100%;">
+                  <div *ngIf="data.type == 'img'; else video">
+                    <img class="img-fluid" alt="100%x280" src="{{data.src}}" style="height: auto !important;">
+                  </div>
+                  <ng-template #video>
+                    <video class="video-fluid" autoplay loop muted>
+                      <source src="{{data.src}}" type="video/mp4" />
+                    </video>
+                  </ng-template>
+                  <div class="card-body">
+                    <h4 class="card-title">{{data.title}}</h4>
+                    <p class="card-text">{{data.decs}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- multi card carousel end -->
+
+  <!-- multi card carousel ngx-image-slider -->
+  <div class="container mt-5">
+    <ng-image-slider [images]="imageObject" [infinite]="true" [videoAutoPlay]="true" [manageImageRatio]='true'
+      [showVideoControls]="false" [imageSize]="{width: ' 30%',height: 'auto' }" slideImage="1">
+    </ng-image-slider>
+  </div>
+  <!-- multi card carousel ngx-image-slider end -->
+
+
+</section>
