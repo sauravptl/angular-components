@@ -1,6 +1,6 @@
 <section class="pt-5 pb-5">
   <!-- multi card carousel -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-6">
         <h3 class="mb-3">Carousel cards title </h3>
@@ -80,6 +80,15 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- multi card carousel end -->
+
+  <!-- single card carousel -->
+  <div class="container-fuild" style="width: 100%; text-align:center;margin:0; padding:0;">
+    <ng-image-slider #nav [images]="imageObject" [infinite]="true" [autoSlide]="1" [videoAutoPlay]="true"
+      [animationSpeed]="0.8" [manageImageRatio]='true' [showVideoControls]="false"
+      [imageSize]="{width: '30%', height: 'auto'}" slideImage="1">
+    </ng-image-slider>
+  </div>
+  <!-- single card carousel end -->
 </section>
